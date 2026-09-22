@@ -7,12 +7,7 @@ PROFESSIONAL SUMMARY
 Results-driven Data Analyst specializing in SQL, Power BI, Excel, and Python. Skilled at transforming raw and messy data into clear dashboards, performance reports, actionable insights, and practical recommendations. Remote-ready with strong written communication, documentation, independent execution, and stakeholder-focused problem solving.
 
 TECHNICAL SKILLS
-- SQL querying and data transformation
-- Power BI dashboards and reporting
-- Excel analysis, modeling, and reporting
-- Python data cleaning and analysis
-- KPI tracking and trend analysis
-- Data storytelling and visualization
+SQL | Power BI | Excel | Python | Data Cleaning | KPI Analysis | Dashboard Design | Business Reporting | Data Storytelling
 
 REMOTE WORK STRENGTHS
 - Independent and organized execution
@@ -21,6 +16,14 @@ REMOTE WORK STRENGTHS
 - Reliable deadline management
 - Stakeholder-ready presentations
 - Business-focused recommendations
+
+PROFESSIONAL FOCUS
+- Performance and KPI reporting
+- Customer and churn analysis
+- Sales and marketing analytics
+- Dashboard development
+- Trend and opportunity analysis
+- Decision-support insights
 
 SELECTED PROJECTS
 Customer Retention Analysis
