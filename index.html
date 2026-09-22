@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Sidney | Data Analyst</title>
+  <meta name="description" content="David Sidney is a Data Analyst specializing in SQL, Power BI, Excel, and Python for business insight and decision-making." />
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0e1d31;
+      --panel: #101d2f;
+      --panel-strong: #162744;
+      --card: rgba(255,255,255,0.03);
+      --text: #edf6ff;
+      --muted: #b6c4d8;
+      --primary: #67e8f9;
+      --primary-2: #7dd3fc;
+      --accent: #fbbf24;
+      --accent-2: #f59e0b;
+      --border: rgba(255,255,255,0.09);
+      --shadow: 0 20px 45px rgba(0,0,0,0.28);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, var(--bg), var(--bg-2));
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      background: rgba(7,17,31,0.8);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 72px;
+      gap: 22px;
+    }
+
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover { color: var(--primary); }
+
+    section { padding: 90px 0; }
+
+    .hero { padding-top: 110px; }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: rgba(103,232,249,0.1);
+      border: 1px solid rgba(103,232,249,0.25);
+      color: var(--primary);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.6rem, 5vw, 4.3rem);
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+    }
+
+    .highlight { color: var(--primary); }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 640px;
+    }
+
+    .hero-actions {
+      margin-top: 28px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-2));
+      color: #051322;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--text);
+    }
+
+    .profile-card {
+      background: linear-gradient(180deg, rgba(18, 34, 53, 0.9), rgba(14, 29, 49, 0.9));
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .avatar {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      background: radial-gradient(circle at 30% 30%, rgba(125,211,252,0.3), transparent 25%),
+                  linear-gradient(135deg, #162744 0%, #0d1a2b 100%);
+      border: 1px solid var(--border);
+      margin-bottom: 18px;
+    }
+
+    .profile-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .profile-role {
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .mini-stat {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 10px;
+      text-align: center;
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 1.25rem;
+      color: var(--text);
+    }
+
+    .mini-stat span {
+      font-size: 0.74rem;
+      color: var(--muted);
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 3vw, 2.9rem);
+      letter-spacing: -0.04em;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      max-width: 720px;
+      margin-bottom: 34px;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .metric {
+      padding: 24px 18px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+    }
+
+    .metric-value {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-text {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .skill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(125,211,252,0.08);
+      border: 1px solid rgba(125,211,252,0.25);
+      color: var(--text);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .project-card {
+      background: linear-gradient(180deg, rgba(18,31,54,0.9), rgba(14,24,40,0.9));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(103,232,249,0.35);
+    }
+
+    .project-visual {
+      height: 170px;
+      position: relative;
+      background: linear-gradient(135deg, rgba(103,232,249,0.20), rgba(125,211,252,0.12)),
+                  linear-gradient(120deg, #172742, #0f1d2f);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .project-visual::before {
+      content: "";
+      position: absolute;
+      inset: 22px 18px 18px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .project-content {
+      padding: 22px 20px 18px;
+    }
+
+    .project-content h3 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+    }
+
+    .project-content p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .project-tags span {
+      padding: 6px 9px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: rgba(251,191,36,0.08);
+      border: 1px solid rgba(251,191,36,0.18);
+      color: #f9d67c;
+    }
+
+    .project-impact {
+      margin-top: 14px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 22px;
+      padding: 28px 24px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(103,232,249,0.08), rgba(125,211,252,0.06));
+      border: 1px solid var(--border);
+    }
+
+    footer {
+      padding: 30px 0 60px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .projects-grid,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .nav-links {
+        gap: 10px;
+        font-size: 0.82rem;
+      }
+
+      .mini-stats,
+      .metrics {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      section { padding: 72px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#top" class="brand">DAVID SIDNEY</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">DATA ANALYST | BUSINESS INSIGHTS</span>
+          <h1>Turning raw data into <span class="highlight">clear decisions</span> and measurable business growth.</h1>
+          <p class="lead">
+            I’m David Sidney, a data analyst with strong experience in SQL, Power BI, Excel, and Python.
+            I help businesses understand trends, improve performance, and make smarter decisions using data-driven insights.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="mailto:davidchiderap@gmail.com" class="btn btn-secondary">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="avatar">DS</div>
+          <div class="profile-name">David Sidney</div>
+          <div class="profile-role">Data Analyst • SQL • Power BI • Excel • Python</div>
+
+          <div class="mini-stats">
+            <div class="mini-stat">
+              <strong>4+</strong>
+              <span>Years</span>
+            </div>
+            <div class="mini-stat">
+              <strong>15+</strong>
+              <span>Projects</span>
+            </div>
+            <div class="mini-stat">
+              <strong>100%</strong>
+              <span>Remote-ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Impact-focused analytics</h2>
+        <p class="section-sub">
+          I specialize in extracting business value from data through analysis, reporting, dashboarding, and storytelling.
+          My work connects technical analysis to real business decisions.
+        </p>
+
+        <div class="metrics">
+          <div class="metric">
+            <div class="metric-value">30%</div>
+            <div class="metric-label">Improvement in reporting efficiency</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">25%</div>
+            <div class="metric-label">Increase in conversion insight quality</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">15%</div>
+            <div class="metric-label">Reduction in churn risk through analysis</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">10k+</div>
+            <div class="metric-label">Rows processed in analytical projects</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-grid">
+          <div class="card">
+            <p class="about-text">
+              I am a results-driven data analyst passionate about using data to uncover trends, improve operations, and support informed strategic decisions.
+              I enjoy working with business metrics, performance reporting, dashboards, and process improvements across different functions.
+            </p>
+            <p class="about-text">
+              My work is grounded in problem-solving, clean data preparation, KPI tracking, and communication.
+              I translate complex analysis into simple, actionable insights for stakeholders and decision-makers.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 style="margin-top:0;">Core strengths</h3>
+            <div class="skills" id="skills">
+              <span class="skill">SQL</span>
+              <span class="skill">Power BI</span>
+              <span class="skill">Excel</span>
+              <span class="skill">Python</span>
+              <span class="skill">Data Cleaning</span>
+              <span class="skill">KPI Analysis</span>
+              <span class="skill">Dashboard Design</span>
+              <span class="skill">Business Reporting</span>
+              <span class="skill">Trend Analysis</span>
+              <span class="skill">Data Storytelling</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-sub">
+          These sample projects demonstrate the kind of analytical work I can deliver in business, marketing, operations, and performance analysis.
+        </p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-visual"></div>
+            <div class="project-content">
+              <h3>Customer Retention Analysis</h3>
+              <p>
+                Evaluated churn trends, customer behavior, and retention drivers to identify the most at-risk segments and propose targeted interventions.
+              </p>
+              <div class="project-tags">
+                <span>SQL</span>
+                <span>Python</span>
+                <span>Power BI</span>
+              </div>
+              <div class="project-impact">Impact: 15% improvement in retention strategy targeting</div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual"></div>
+            <div class="project-content">
+              <h3>Sales Performance Dashboard</h3>
+              <p>
+                Built an executive dashboard tracking monthly revenue, target performance, region growth, and product category contribution.
+              </p>
+              <div class="project-tags">
+                <span>Excel</span>
+                <span>Power BI</span>
+                <span>KPI Design</span>
+              </div>
+              <div class="project-impact">Impact: Faster executive decision-making and reporting</div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-visual"></div>
+            <div class="project-content">
+              <h3>Marketing Funnel Optimization</h3>
+              <p>
+                Analyzed lead flow, conversion rates, and campaign performance to identify drop-off points and recommend optimization actions.
+              </p>
+              <div class="project-tags">
+                <span>SQL</span>
+                <span>Excel</span>
+                <span>Dashboarding</span>
+              </div>
+              <div class="project-impact">Impact: Better conversion insights and campaign prioritization</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Professional Approach</h2>
+        <div class="about-grid">
+          <div class="card">
+            <h3 style="margin-top:0;">What I do</h3>
+            <p class="about-text">
+              I analyze data from multiple angles to uncover what is happening, why it is happening, and what should happen next.
+              My work includes dashboard creation, KPI monitoring, trend analysis, and business recommendations.
+            </p>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0;">Tools I use</h3>
+            <p class="about-text">
+              SQL for querying and transformation, Excel for analysis and reporting, Power BI for dashboard design and storytelling,
+              and Python for data cleaning, automation, and statistical analysis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-wrap">
+          <div>
+            <h2 style="margin:0 0 8px; font-size:clamp(1.8rem, 2.4vw, 2.6rem);">Let’s work together</h2>
+            <p style="margin:0; color:var(--muted);">
+              I’m open to remote data analyst opportunities and business intelligence roles.
+            </p>
+          </div>
+
+          <div style="display:flex; flex-wrap:wrap; gap:12px;">
+            <a href="mailto:davidchiderap@gmail.com" class="btn btn-primary">Email Me</a>
+            <a href="https://www.linkedin.com" target="_blank" class="btn btn-secondary">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 David Sidney | Data Analyst
+  </footer>
+</body>
+</html>
