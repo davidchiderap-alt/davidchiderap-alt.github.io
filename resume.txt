@@ -1,0 +1,36 @@
+David Sidney
+Data Analyst
+Nigeria | davidchiderap@gmail.com
+Portfolio: https://davidchiderap-alt.github.io/
+
+PROFESSIONAL SUMMARY
+Results-driven Data Analyst specializing in SQL, Power BI, Excel, and Python. Skilled at transforming raw and messy data into clear dashboards, performance reports, actionable insights, and practical recommendations. Remote-ready with strong written communication, documentation, independent execution, and stakeholder-focused problem solving.
+
+TECHNICAL SKILLS
+- SQL querying and data transformation
+- Power BI dashboards and reporting
+- Excel analysis, modeling, and reporting
+- Python data cleaning and analysis
+- KPI tracking and trend analysis
+- Data storytelling and visualization
+
+REMOTE WORK STRENGTHS
+- Independent and organized execution
+- Clear asynchronous communication
+- Structured documentation
+- Reliable deadline management
+- Stakeholder-ready presentations
+- Business-focused recommendations
+
+SELECTED PROJECTS
+Customer Retention Analysis
+Used SQL, Python, and Power BI to analyze churn patterns, customer behavior, and retention drivers. Identified at-risk segments and translated findings into targeted retention recommendations.
+
+Sales Performance Dashboard
+Built an executive dashboard using Excel and Power BI to monitor revenue, targets, regional performance, and product contribution for faster business reporting.
+
+Marketing Funnel Optimization
+Analyzed lead flow, conversion rates, and campaign performance to identify funnel drop-off points and recommend campaign priorities.
+
+AVAILABILITY
+Open to remote Data Analyst, Business Analyst, and Business Intelligence opportunities.
